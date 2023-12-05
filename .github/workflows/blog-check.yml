@@ -1,0 +1,18 @@
+name: blog-check
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Rubocop
+        run: make rubocop
+
+      - name: Slim-linter
+        run: make slim_linter
