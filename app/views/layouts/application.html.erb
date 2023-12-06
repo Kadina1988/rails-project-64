@@ -8,6 +8,11 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <h3>My Blog</h3>
+
+<p><%= link_to 'Sign in', new_user_session_path %></p>
+<p><%= link_to 'Sign out', destroy_user_session_path, method: :delete  %></p>
+<p></p>
   </head>
 
   <body>

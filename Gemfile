@@ -55,6 +55,7 @@ gem 'rubocop-rails', require: false
 gem 'faker'
 gem "sentry-ruby"
 gem "sentry-rails"
+gem 'devise'
 
 
 
