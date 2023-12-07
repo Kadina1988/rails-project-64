@@ -1,8 +1,12 @@
-- @posts.each do |post|
-  h4
-    = post.title
-  p
-    = post.body
-  p
-    = post.creator
+div.text-center
+  h2.border-bottom Blog
+
+  - @posts.each do |post|
+    div.border-bottom
+      h4
+        = post.title
+      p
+        = post.body
+      p
+        = post.creator
 

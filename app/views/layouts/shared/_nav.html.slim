@@ -2,8 +2,6 @@ nav.navbar.bg-primary
   h3
     = link_to 'My Blog', root_path
   p
-    = link_to 'Sign in', new_user_session_path, class: 'btn bnt-secondary'
+    = sign_in_helper
   p
-    = nav_panel
-  p
-    = button_to 'Sign out', destroy_user_session_path, method: :delete, class: 'btn btn-secondary'
+    = sign_out_helper
