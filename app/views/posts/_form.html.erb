@@ -1,0 +1,17 @@
+<%= form_with model: @post do |f| %>
+  <p>
+    <%= f.label :category_id %>
+    <%= f.collection_select :category_id, Category.all, :id, :name, promt: true %>
+  </p>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>

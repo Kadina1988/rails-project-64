@@ -56,6 +56,7 @@ gem 'faker'
 gem "sentry-ruby"
 gem "sentry-rails"
 gem 'devise'
+gem 'simple_form'
 
 
 
