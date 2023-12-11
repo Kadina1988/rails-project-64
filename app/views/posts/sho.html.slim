@@ -7,3 +7,10 @@ p
   = @post.body
 p
   = @post.creator
+br
+
+= simple_form_for @post.comments.build do |f|
+p
+  = f.input :content
+p
+  = f.submit
