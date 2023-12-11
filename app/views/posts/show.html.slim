@@ -1,0 +1,26 @@
+h4
+  = @post.title
+p
+  = @post.body
+p
+  = @post.creator
+br
+
+= form_with model: @comment do |f|
+  p
+    = f.label :content
+  p
+    = f.text_field :content
+
+  p
+    = f.submit
+
+- @post.comments.each do |comment|
+  p
+    = comment.content
+
+
+
+
+
+
