@@ -15,17 +15,12 @@ br
     = f.submit
 
 - @post.comments.each do |comment|
-  p
-    = comment.content
-
-  - comment.descendants.each do |child|
+  - if comment.parent.nil?
     p
-      = child.content
+      = comment.content
+    p
+      = ('--' * 80)
 
-
-
-  p
-    = ('.' * 40)
 
 
 
