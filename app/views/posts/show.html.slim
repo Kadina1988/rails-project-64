@@ -6,20 +6,16 @@ p
   = @post.creator
 br
 
-= form_with model: @comment do |f|
+= form_with model: [@post, @post.comments.build] do |f|
   p
-    = f.label :content, 'Comment:'
+    = f.label :content
   p
     = f.text_field :content
   p
     = f.submit
 
-- @post.comments.each do |comment|
-  - if comment.parent.nil?
-    p
-      = comment.content
-    p
-      = ('--' * 80)
+
+- show_comment(@post.comments)
 
 
 
