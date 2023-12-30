@@ -1,4 +1,4 @@
 rubocop:
-	rubocop --require rubocop-rails
+	rubocop
 slim_linter:
 	slim-lint app/views/
