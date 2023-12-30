@@ -290,6 +290,7 @@ DEPENDENCIES
   pg
   puma (~> 5.0)
   rails (~> 7.0.8)
+  rubocop
   rubocop-rails
   selenium-webdriver
   sentry-rails

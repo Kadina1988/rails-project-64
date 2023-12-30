@@ -55,6 +55,7 @@ gem 'ancestry'
 gem 'devise'
 gem 'faker'
 gem 'minitest-power_assert'
+gem 'rubocop', require: false
 gem 'rubocop-rails', require: false
 gem 'sentry-rails'
 gem 'sentry-ruby'
