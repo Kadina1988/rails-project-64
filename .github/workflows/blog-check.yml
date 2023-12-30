@@ -8,11 +8,25 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    name: Ruby ${{ matrix.ruby }}
+    strategy:
+      fail-fast: false
+      matrix:
+        ruby:
+          - '3.2.2'
+
     steps:
       - uses: actions/checkout@v3
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
+      - name: Run the default task
+        run: bundle exec rake
 
-      # - name: Rubocop
-      #   run: make lint
+      - name: Rubocop
+        run: make lint
 
       - name: Slim-linter
         run: make slim_linter
