@@ -25,6 +25,9 @@ jobs:
       - name: Run the default task
         run: bundle exec rake
 
+      - name: Install assets precompile
+        run: rails assets:precompile
+
       - name: Rubocop
         run: make lint
 
