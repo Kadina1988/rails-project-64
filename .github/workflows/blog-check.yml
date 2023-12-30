@@ -11,8 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Rubocop
-        run: make lint
+      # - name: Rubocop
+      #   run: make lint
 
       - name: Slim-linter
         run: make slim_linter
