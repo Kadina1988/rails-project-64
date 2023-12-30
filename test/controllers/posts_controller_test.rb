@@ -28,13 +28,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to post_path(Post.last)
   end
 
-  test 'should show post when user is not authenticate ' do
-    get post_path(@post)
-    assert_response 302
-  end
-
   test 'should show with authenticate user' do
-    sign_in users(:one)
     get post_path(@post)
     assert_response :success
   end

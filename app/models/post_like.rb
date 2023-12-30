@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-class PostComment < ApplicationRecord
+class PostLike < ApplicationRecord
   belongs_to :post
-  has_ancestry
 end

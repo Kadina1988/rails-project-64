@@ -4,29 +4,13 @@ p
   = @post.body
 p
   = @post.creator
-br
 
-= form_with model: [@post, @post.comments.build] do |f|
+-if user_signed_in?
   p
-    = f.label :content
+    = button_to 'Like', post_likes_path(@post), method: :post
   p
-    = f.text_field :content
-  p
-    = f.submit
-
+    = @post.likes.count
+  br
+  = render 'comments/form'
 
 - show_comment(@post.comments)
-
-
-
-
-
-
-
-
-
-
-
-
-
-

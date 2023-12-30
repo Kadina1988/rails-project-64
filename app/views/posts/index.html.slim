@@ -1,12 +1,10 @@
-div.text-center
+.text-center
   h2.border-bottom Blog
-
   - @posts.each do |post|
-    div.border-bottom
+    .border-bottom
       h4
-        = post.title
+        = link_to post.title.to_s, post_path(post)
       p
         = post.body
       p
         = post.creator
-

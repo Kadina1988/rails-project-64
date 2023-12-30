@@ -1,14 +1,16 @@
-class CommentsController < ApplicationController
-  def new
-    # @post = Post.find(params[:post_id])
-    @comment = PostComment.new
-  end
+# frozen_string_literal: true
 
+class CommentsController < ApplicationController
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.build(comment_params)
-    @comment.save
-    redirect_to post_path(@post)
+    @comment.creator = current_user.email
+
+    if @comment.save
+      redirect_to post_path(@post)
+    else
+      render 'posts/show'
+    end
   end
 
   private
