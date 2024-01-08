@@ -1,0 +1,8 @@
+= turbo_frame_tag @comment do
+  = simple_form_for [@post, @comment] do |f|
+    = f.hidden_field :parent_id
+    p
+      = f.input :content, label: 'Comment:'
+    p
+      = f.submit
+

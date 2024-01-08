@@ -8,9 +8,10 @@ p
 -if user_signed_in?
   p
     = button_to 'Like', post_likes_path(@post), method: :post
-  p
     = @post.likes.count
-  br
-  = render 'comments/form'
 
-- show_comment(@post.comments)
+br
+= render 'comments/form'
+
+= render partial: 'comments/comment', collection: @comments
+
