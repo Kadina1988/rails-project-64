@@ -1,4 +1,0 @@
-<p><%= comment.content %></p>
-<p><%= link_to 'nnnew', new_post_comment_path(@post, parent_id: comment),
-                                          data: { turbo_frame: dom_id(PostComment.new) } %></p>
-<%= turbo_frame_tag PostComment.new %>
