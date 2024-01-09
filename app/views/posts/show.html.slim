@@ -9,11 +9,7 @@ p
   p
     = button_to 'Like', post_likes_path(@post), method: :post
     = @post.likes.count
-
-br
-= render 'comments/form'
+  br
+    = render 'comments/form'
 
 = render partial: 'comments/comment', collection: @comments
-
-
-

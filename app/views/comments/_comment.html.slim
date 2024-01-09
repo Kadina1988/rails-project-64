@@ -1,6 +1,6 @@
 p
   = comment.content
-p
-  = link_to 'Reply', new_post_comment_path(@post, parent_id: comment) unless comment.content.nil?
-
-
+- if user_signed_in?
+  p
+    = link_to 'Reply', new_post_comment_path(@post, parent_id: comment)
+                                             unless comment.content.nil?

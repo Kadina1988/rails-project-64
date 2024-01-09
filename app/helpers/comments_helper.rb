@@ -7,6 +7,6 @@ module CommentsHelper
         render(partial: 'comments/comment', collection: comments) + content_tag(:div, nested_comments(sub_comments),
                                                                                 class: 'nested_comment')
       end
-    end.join.html_safe
+    end.join
   end
 end
