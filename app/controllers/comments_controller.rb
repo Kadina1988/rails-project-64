@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CommentsController < ApplicationController
+  before_action :authenticate_user!
+
   def new
     @post = Post.find(params[:post_id])
     @comment = @post.comments.build(parent_id: params[:parent_id])

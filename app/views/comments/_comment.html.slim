@@ -1,6 +1,24 @@
-p
-  = comment.content
-- if user_signed_in?
-  p
-    = link_to 'Reply', new_post_comment_path(@post, parent_id: comment)
-                                             unless comment.content.nil?
+ul
+  li
+    = comment.content
+    - if user_signed_in?
+    p
+      = link_to 'Reply', new_post_comment_path(@post, parent_id: comment) \
+              unless comment.content.nil?
+
+    - if comment.has_children?
+      - comment.children.each do |child|
+        = render 'comments/comment', comment: child
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -16,7 +16,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'get index' do
-    get posts_url
+    get posts_path
     assert_response :success
   end
 
@@ -28,7 +28,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to post_path(Post.last)
   end
 
-  test 'should show ' do
+  test 'should show' do
     get post_path(@post)
     assert_response :success
   end

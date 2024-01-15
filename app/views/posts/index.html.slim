@@ -2,7 +2,7 @@
   h2.border-bottom Blog
   - @posts.each do |post|
     .border-bottom
-      h4
+      h4.list_posts
         = link_to post.title.to_s, post_path(post)
       p
         = post.body
