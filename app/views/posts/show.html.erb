@@ -1,0 +1,14 @@
+<h4><%= @post.title %></h4>
+<p><%= @post.body %></p>
+<p><%= @post.creator %></p>
+<% if user_signed_in? %>
+  <p><%= managing_likes(@post) %></p>
+<% end %>
+<p><%= @post.likes.count %></p>
+<br>
+<%#= render 'comments/form' %>
+
+<%= render partial: 'comments/comment', collection: @comments.roots %>
+<script>
+
+</script>
