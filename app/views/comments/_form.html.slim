@@ -1,6 +1,6 @@
 = simple_form_for [@post, @comment] do |f|
   = f.hidden_field parent_id: parent
   p
-    = f.input :content, label: 'Comment: '
+    = f.input :content, label: 'Comment:'
   p
     = f.submit
