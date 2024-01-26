@@ -4,10 +4,10 @@
   <p><%= @post.creator %></p>
   <% if user_signed_in? %>
     <p><%= managing_likes(@post) %></p>
+    <%= render 'comments/form',  parent: nil   %>
   <% end %>
-  <p><%= @post.likes.count %></p>
+  <p><%= @post.likes.count %> Likes</p>
   <br>
-  <%= render 'comments/form',  parent: nil   %>
 </div>
 
 <%= render partial: 'comments/comment', collection: @comments.roots %>
