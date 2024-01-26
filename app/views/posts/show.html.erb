@@ -7,7 +7,7 @@
   <% end %>
   <p><%= @post.likes.count %></p>
   <br>
-  <%#= render 'comments/form',  parent: nil   %>
+  <%= render 'comments/form',  parent: nil   %>
 </div>
 
 <%= render partial: 'comments/comment', collection: @comments.roots %>

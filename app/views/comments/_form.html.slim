@@ -1,5 +1,5 @@
 = simple_form_for [@post, @comment], remote: true do |f|
-  = f.hidden_field :ancestry, value: parent.ancestry
+  = f.hidden_field :ancestry, value: parent.ancestry unless parent.nil?
   p
     = f.input :content, label: 'Comment:'
   p

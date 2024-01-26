@@ -3,16 +3,11 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!
 
-  def new
-    @post = Post.find(params[:post_id])
-    @comment = @post.comments.build
-  end
-
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.build(comment_params)
+    debugger
     @comment.creator = current_user.email
-
     if @comment.save
       redirect_to post_path(@post)
     else
