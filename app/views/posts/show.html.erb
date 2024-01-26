@@ -7,26 +7,25 @@
   <% end %>
   <p><%= @post.likes.count %></p>
   <br>
-  <%= render 'comments/form' %>
+  <%#= render 'comments/form',  parent: nil   %>
 </div>
 
 <%= render partial: 'comments/comment', collection: @comments.roots %>
 
 
-  <script>
-    var butt = document.getElementsByClassName('collapsible')
-    var i
+<script>
+  var butt = document.getElementsByClassName('collapsible')
+  var i
 
-    for(i = 0; i < butt.length; i++ ) {
-      butt[i].addEventListener('click', function() {
-        let field = this.nextElementSibling
-        if (field.style.display == 'block' ) {
-          field.style.display = 'none'
-        } else {
-          field.style.display = 'block'
-        }
-        console.log('after ' + field.style.display)
-      })
-    }
-  </script>
+  for(i = 0; i < butt.length; i++ ) {
+    butt[i].addEventListener('click', function() {
+      let field = this.nextElementSibling
+      if (field.style.display == 'block' ) {
+        field.style.display = 'none'
+      } else {
+        field.style.display = 'block'
+      }
+    })
+  }
+</script>
 
