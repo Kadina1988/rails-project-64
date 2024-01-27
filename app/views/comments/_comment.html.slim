@@ -4,7 +4,7 @@ ul
     - if user_signed_in?
       =< content_tag :a,  'Reply', class: "parent_id=#{comment.id} collapsible"
       .collapse id="response-#{comment.id}"
-        = render partial: 'comments/form', locals: { parent: comment }
+        = render partial: 'comments/form', locals: { parent: comment.id }
     - if comment.has_children?
       - comment.children.each do |child|
         = render 'comments/comment', comment: child

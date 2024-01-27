@@ -4,7 +4,7 @@
   <p><%= @post.creator %></p>
   <% if user_signed_in? %>
     <p><%= managing_likes(@post) %></p>
-    <%= render 'comments/form',  parent: nil   %>
+    <%= render 'comments/form', parent: nil  %>
   <% end %>
   <p><%= @post.likes.count %> Likes</p>
   <br>
