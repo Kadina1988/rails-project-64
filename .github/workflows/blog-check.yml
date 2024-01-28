@@ -36,4 +36,5 @@ jobs:
         run: make slim_linter
 
       - name: Run test
-        run: make testing
+        run: rails test
+

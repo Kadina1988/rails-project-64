@@ -19,8 +19,6 @@ rubocop:
 	gem install rubocop-rails
 	rubocop
 
-testing:
-	rails test
 
 
 
