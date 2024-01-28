@@ -32,8 +32,5 @@ jobs:
       - name: Run the default task
         run: bundle install
 
-      - name: Build yarn
-        run: make yarn
-
       - name: Slim-linter
         run: make slim_linter
