@@ -1,7 +1,5 @@
 build:
 	yarn build
-
-build_css:
 	yarn build:css
 
 assets:
@@ -12,3 +10,7 @@ slim_linter:
 
 rubocop:
 	rubocop
+
+testing:
+	rails test
+
