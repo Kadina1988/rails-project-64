@@ -28,6 +28,15 @@ jobs:
       - name: Install assets precompile
         run: bundle exec rake assets:precompile
 
+      - name: yarn install
+        tun: make build
+
+      - name: yarn css install
+        run: make build_css
+
+      - name: assets install
+        run: make assets
+
       - name: Rubocop
         run: make lint
 
