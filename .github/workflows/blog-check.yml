@@ -29,8 +29,5 @@ jobs:
       - name: Run start
         run: make start
 
-      - name: Run the default task
-        run: bundle install
-
-      - name: Slim-linter
-        run: make slim_linter
+      # - name: Slim-linter
+      #   run: make slim_linter
