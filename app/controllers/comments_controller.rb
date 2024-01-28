@@ -5,7 +5,6 @@ class CommentsController < ApplicationController
   before_action :find_post
 
   def create
-    debugger
     @comment = @post.comments.build(comment_params)
     @comment.creator = current_user.email
     if @comment.save
