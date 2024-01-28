@@ -28,7 +28,7 @@ jobs:
 
       - name: Run start
         run: make start
-
+      - run: gem install rubocop
       - name: Run rubocop
         run: rubocop
 
