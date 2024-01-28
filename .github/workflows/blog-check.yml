@@ -29,11 +29,8 @@ jobs:
       - name: Run start
         run: make start
 
-      - name: ls
-        run: ls
-
       - name: Run rubocop
-        run: make rubocop
+        run: rubocop
 
 
 
