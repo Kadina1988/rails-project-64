@@ -29,12 +29,11 @@ jobs:
       - name: Run start
         run: make start
 
-      - run: gem install rubocop
-      - run: gem install rubocop-rails
-      - run: gem install slim_lint
-
       - name: Run rubocop
-        run: rubocop
+        run: make rubocop
 
       - name: Slim-linter
         run: make slim_linter
+
+      - name: Run test
+        run: rails test
