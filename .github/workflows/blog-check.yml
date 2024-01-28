@@ -25,9 +25,6 @@ jobs:
       - name: Run the default task
         run: bundle install
 
-      - name: Run build yarn
-        run: make build
-
       - name: Run Testing
         run: make testing
 
