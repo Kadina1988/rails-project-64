@@ -22,8 +22,18 @@ jobs:
         with:
           ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
+
+      - name: Run setup
+        run: make setup
+
+      - name: Run start
+        run: make start
+
       - name: Run the default task
         run: bundle install
+
+      - name: Run yarn
+        run: make test
 
       - name: Build yarn
         run: make yarn
