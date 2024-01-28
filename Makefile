@@ -11,9 +11,12 @@ test:
 	yarn run build:css
 
 slim_linter:
+	gem install slim_lint
 	slim-lint app/views/
 
 rubocop:
+	gem install rubocop
+	gem install rubocop-rails
 	rubocop
 
 
