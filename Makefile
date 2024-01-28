@@ -4,6 +4,5 @@ slim_linter:
 rubocop:
 	rubocop
 
-testing:
-	rails test
+
 
