@@ -5,8 +5,8 @@ class CommentsController < ApplicationController
   before_action :find_post
 
   def create
+    debugger
     @comment = @post.comments.build(comment_params)
-    create_child unless @comment.ancestry.nil?
     @comment.creator = current_user.email
     if @comment.save
       redirect_to post_path(@post)
@@ -17,14 +17,8 @@ class CommentsController < ApplicationController
 
   private
 
-  def create_child
-    parent = PostComment.find(@comment.ancestry.to_i)
-    com = parent.children.new
-    @comment.ancestry = com.ancestry
-  end
-
   def comment_params
-    params.require(:post_comment).permit(:content, :ancestry)
+    params.require(:post_comment).permit(:content, :parent_id)
   end
 
   def find_post
