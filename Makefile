@@ -1,3 +1,6 @@
+yarn:
+	yarn build
+
 slim_linter:
 	slim-lint app/views/
 
