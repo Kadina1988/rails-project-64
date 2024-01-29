@@ -9,10 +9,3 @@ start:
 test:
 	yarn run build
 	yarn run build:css
-
-testing:
-	bin/test
-
-
-
-
