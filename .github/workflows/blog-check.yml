@@ -29,6 +29,7 @@ jobs:
       - name: Run start
         run: make start
 
+      - name: install linters
         run: gem install rubocop
         run: gem install rubocop-rails
         run: gem install slim_lint
