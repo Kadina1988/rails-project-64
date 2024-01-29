@@ -33,7 +33,7 @@ jobs:
         run: |
           gem install rubocop
           gem install rubocop-rails
-          gem install slim-linter
+          gem install slim_lint
 
       - name: Run rubocop
         run: rubocop
