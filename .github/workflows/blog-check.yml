@@ -40,5 +40,8 @@ jobs:
           rubocop
           slim-lint
 
+      - name: Run test
+        run: bin/rake test
+
 
 
