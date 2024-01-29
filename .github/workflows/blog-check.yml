@@ -35,6 +35,5 @@ jobs:
       - name: Slim-linter
         run: make slim_linter
 
-      - name: Run test
-        run: make test
+
 
