@@ -5,7 +5,6 @@ setup:
 
 start:
 	bin/dev
-
-test:
 	yarn run build
 	yarn run build:css
+

@@ -16,8 +16,23 @@ jobs:
           - '3.2.2'
 
     steps:
-      - name: Run a one-line
-        run: echo Hello, World
+      - name: Run setup
+        run: make setup
+
+      - name: Run start
+        run: make start
+
+      - name: Install linters
+        run: |
+          gem install rubocop
+          gem install rubocop-rails
+          gem install slim-lint
+
+      - name: Run linters
+        run: |
+          bubocop
+          slim-lint
+
 
       - name: Run a multi-line
         run: |
