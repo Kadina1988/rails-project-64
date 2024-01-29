@@ -10,6 +10,9 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to post_path(@post)
     else
+
+
+
       render 'posts/show'
     end
   end
