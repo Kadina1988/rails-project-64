@@ -16,32 +16,25 @@ jobs:
           - '3.2.2'
 
     steps:
+      - uses: actions/checkout@v3
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
+
       - name: Run setup
         run: make setup
 
       - name: Run start
-        run: |
-          bin/setup
-          yarn install
-          bundle install
-
-      - name: Run start
         run: make start
 
-      - name: Install linters
-        run: |
-          gem install rubocop
-          gem install rubocop-rails
-          gem install slim-lint
+      - name: Run rubocop
+        run: make rubocop
 
-      - name: Run linters
-        run: |
-          rubocop
-          slim-lint
+      - name: Slim-linter
+        run: make slim_linter
 
-
-      - name: Run a multi-line
-        run: |
-          echo Add otehr
-          echo test, and deploy
+      - name: Run test
+        run: make test
 
