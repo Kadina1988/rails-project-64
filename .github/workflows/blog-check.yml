@@ -42,7 +42,7 @@ jobs:
         run: rubocop
 
       - name: Slim-linter
-        run: slim_lint
+        run: slim-lint
 
       - name: Run test
         run: make testing
