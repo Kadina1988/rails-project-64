@@ -44,6 +44,6 @@ jobs:
       - name: Slim-linter
         run: slim-lint
 
-      # - name: Run test
-      #   run: rails test
+      - name: Run test
+        run: make testing
 

@@ -11,7 +11,7 @@ test:
 	yarn run build:css
 
 testing:
-	rails test
+	bin/test
 
 
 
