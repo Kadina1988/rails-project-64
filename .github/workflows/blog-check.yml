@@ -20,6 +20,12 @@ jobs:
         run: make setup
 
       - name: Run start
+        run: |
+          bin/setup
+          yarn install
+          bundle install
+
+      - name: Run start
         run: make start
 
       - name: Install linters
