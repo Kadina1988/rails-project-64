@@ -31,7 +31,11 @@ jobs:
 
       - name: install linters
         run: gem install rubocop
+
+      - name: install rubocop-rails
         run: gem install rubocop-rails
+
+      - name: install slim linter
         run: gem install slim_lint
 
       - name: Run rubocop
