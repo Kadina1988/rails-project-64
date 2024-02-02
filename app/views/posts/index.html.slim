@@ -1,10 +1,14 @@
-.text-center
-  h2.border-bottom Blog
-  - @posts.each do |post|
-    .border-bottom
-      h4.list_posts
-        = link_to post.title.to_s, post_path(post)
-      p
-        = post.body
-      p
-        = post.creator
+h2 Collective blog
+- @posts.each do |post|
+  .border.mb-2
+    a
+      = link_to post.title, post_path(post), class: 'btn bnt-secondary fs-3'
+    p.fs-5
+      = post.body
+    p.fs-6
+      = post.creator
+      | , likes:
+      |
+      = post.likes.count
+
+

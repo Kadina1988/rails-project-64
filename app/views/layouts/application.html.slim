@@ -9,7 +9,8 @@ html
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = javascript_include_tag "application", "data-turbo-track": "reload", defer: true
   body
-    = render 'layouts/shared/nav'
-    = render 'layouts/shared/flash'
-    .text-center
-      = yield
+    .container
+      = render 'layouts/shared/nav'
+      = render 'layouts/shared/flash'
+      p.text-start
+        = yield

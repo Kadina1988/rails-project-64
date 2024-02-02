@@ -1,6 +1,6 @@
-ul
+ul.border
   li
-    = comment.content
+    = comment.body
     - if user_signed_in?
       =< content_tag :a, 'Reply', class: 'collapsible'
       .collapse id="response-#{comment.id}"
