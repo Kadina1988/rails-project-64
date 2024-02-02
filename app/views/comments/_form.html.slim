@@ -1,0 +1,6 @@
+= simple_form_for [@post, @comment], remote: true do |f|
+  = f.hidden_field :parent_id, value: parent unless parent.nil?
+  p
+    = f.input :body, label: false
+  p
+    = f.submit

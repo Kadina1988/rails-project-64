@@ -1,0 +1,13 @@
+require: rubocop-rails
+
+Style/Documentation:
+  Enabled: false
+
+Rails/HasManyOrHasOneDependent:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 156
+
+
+

@@ -1,0 +1,47 @@
+name: blog-check
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Ruby ${{ matrix.ruby }}
+    strategy:
+      fail-fast: false
+      matrix:
+        ruby:
+          - '3.2.2'
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
+
+      - name: Run setup
+        run: make setup
+
+      - name: Run start
+        run: make start
+
+      - name: Install linter
+        run: |
+          gem install rubocop
+          gem install rubocop-rails
+          gem install slim_lint
+
+      - name: Run linters
+        run: |
+          rubocop
+          slim-lint
+
+      - name: Run test
+        run: bin/rake test
+
+
+

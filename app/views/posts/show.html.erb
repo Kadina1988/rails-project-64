@@ -1,0 +1,33 @@
+<h4><%= @post.title %></h4>
+<p><%= @post.body %></p>
+<p><%= @post.creator %></p>
+<% if user_signed_in? %>
+  <p class='text-end'>
+    <%= managing_likes(@post) %>
+    <%= @post.likes.count %>
+  </p>
+  <p>Comments:</p>
+  <%= render 'comments/form', parent: nil  %>
+<% else %>
+  <p class='text-end'>likes <%= @post.likes.count %><p>
+<% end %>
+
+<%= render partial: 'comments/comment', collection: @comments.roots %>
+
+
+<script>
+  var butt = document.getElementsByClassName('collapsible')
+  var i
+
+  for(i = 0; i < butt.length; i++ ) {
+    butt[i].addEventListener('click', function() {
+      let field = this.nextElementSibling
+      if (field.style.display == 'block' ) {
+        field.style.display = 'none'
+      } else {
+        field.style.display = 'block'
+      }
+    })
+  }
+</script>
+

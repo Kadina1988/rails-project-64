@@ -1,0 +1,12 @@
+h2 Collective blog
+- @posts.each do |post|
+  .border.mb-2
+    a
+      = link_to post.title, post_path(post), class: 'btn bnt-secondary fs-3'
+    p.fs-5
+      = post.body
+    p.fs-6
+      = post.creator
+      | , likes:
+      |
+      = post.likes.count
