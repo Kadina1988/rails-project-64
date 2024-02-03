@@ -11,7 +11,7 @@ Bundler.require(*Rails.groups)
 module RailsProject64
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 7.1
+    config.load_defaults 7.0
     # config.active_support.default_message_encryptor_serializer = :json
     # config.active_support.use_marshal_serialization = false
     # config.active_support.fallback_to_marshal_deserialization = false
