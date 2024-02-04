@@ -23,7 +23,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_14_082431) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "ancestry"
-    t.string "creator"
+    t.string "user"
     t.index ["ancestry"], name: "index_post_comments_on_ancestry"
     t.index ["post_id"], name: "index_post_comments_on_post_id"
   end
