@@ -25,7 +25,7 @@ class LikesControllerTest < ActionDispatch::IntegrationTest
     sign_in users(:one)
     like = post_likes(:one)
     assert_difference('PostLike.count', -1) do
-      delete like_path(like)
+      delete post_like_path(like.post, like)
     end
 
     assert_redirected_to post_path(like.post)
