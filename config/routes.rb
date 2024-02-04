@@ -6,7 +6,12 @@ Rails.application.routes.draw do
   resources :posts, shallow: true do
     resources :comments, only: %i[create], as: 'post_comments'
     resources :comments, only: :new
-    resources :likes, only: %i[create destroy]
+    resources :likes, only: %i[create]
+    # resources :likes, only: :destroy, as: 'post_like'
+  end
+
+  resources :posts do
+    resources :likes, only: :destroy
   end
 
   root 'posts#index'
