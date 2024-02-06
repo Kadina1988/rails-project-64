@@ -1,3 +1,2 @@
 exclude:
-  - 'app/views/layouts/**/*.slim'
   - 'app/views/devise/**/*.slim'
