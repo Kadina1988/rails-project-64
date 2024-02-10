@@ -9,7 +9,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     @attrs = {
       title: 'New post',
       body: 'Text',
-      category_id: Category.last.id,
+      category_id: Category.last.id
     }
     @post = users(:one).posts.build(@attrs)
     @post.save if @post.valid?

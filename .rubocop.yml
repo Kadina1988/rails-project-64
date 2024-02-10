@@ -9,5 +9,8 @@ Rails/HasManyOrHasOneDependent:
 Layout/LineLength:
   Max: 156
 
+Rails/InverseOf:
+  Enabled: false
+
 
 
