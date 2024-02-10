@@ -1,0 +1,22 @@
+<%= form_with model: @post, local: true do |f| %>
+
+  <%= render 'shared/errors', object: @post %>
+
+  <p>
+    <%= f.collection_select :category_id, Category.all, :id, :name, promt: true %>
+  </p>
+
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

@@ -5,8 +5,10 @@ class LikesController < ApplicationController
   before_action :find_post, only: :create
 
   def create
-    @like = @post.likes.build
-    @like.user_id = current_user.id
+    @like = @post.likes
+                 .merge(current_user.likes)
+                 .build
+
     @like.save
     redirect_to post_path(@post)
   end

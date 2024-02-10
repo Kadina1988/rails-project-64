@@ -1,6 +1,6 @@
 <h4><%= @post.title %></h4>
 <p><%= @post.body %></p>
-<p><%= @post.creator %></p>
+<p><%= @post.creator.email %></p>
 <% if user_signed_in? %>
   <p class='text-end'>
     <%= managing_likes(@post) %>
@@ -9,10 +9,10 @@
   <p>Comments:</p>
   <%= render 'comments/form', parent: nil  %>
 <% else %>
-  <p class='text-end'>likes <%= @post.likes.count %><p>
+  <p class='text-end'>likes <%= @post.likes_count %><p>
 <% end %>
 
-<%= render partial: 'comments/comment', collection: @comments.roots %>
+<%= render partial: 'comments/comment', collection: @comments.roots unless @comments.nil? %>
 
 
 <script>

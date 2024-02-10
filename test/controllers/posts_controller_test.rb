@@ -6,16 +6,17 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
 
   setup do
-    @post = posts(:one)
     @attrs = {
       title: 'New post',
       body: 'Text',
       category_id: Category.last.id,
-      creator: 'one@mail.ru'
     }
+    @post = users(:one).posts.build(@attrs)
+    @post.save if @post.valid?
   end
 
   test 'get index' do
+    # debugger
     get posts_path
     assert_response :success
   end

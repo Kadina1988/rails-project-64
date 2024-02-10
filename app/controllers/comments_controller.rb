@@ -5,8 +5,10 @@ class CommentsController < ApplicationController
   before_action :find_post
 
   def create
-    @comment = @post.comments.build(comment_params)
-    @comment.user = current_user.email
+    @comment = @post.comments
+                    .merge(current_user.comments)
+                    .build(comment_params)
+
     if @comment.save
       redirect_to post_path(@post)
     else

@@ -6,7 +6,7 @@ h2 Collective blog
     p.fs-5
       = post.body
     p.fs-6
-      = post.creator
+      = post.creator.email
       | , likes:
       |
-      = post.likes.count
+      = post.likes_count

@@ -14,17 +14,16 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
+    @post = current_user.posts.build
   end
 
   def create
-    @post = Post.new(post_params)
-    @post.creator = current_user.email
+    @post = current_user.posts.build(post_params)
 
     if @post.save
       redirect_to post_path(@post)
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
