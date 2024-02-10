@@ -1,16 +1,16 @@
 <h4><%= @post.title %></h4>
 <p><%= @post.body %></p>
 <p><%= @post.creator.email %></p>
-<% if user_signed_in? %>
+<%# if user_signed_in? %>
   <p class='text-end'>
     <%= managing_likes(@post) %>
     <%= @post.likes.count %>
   </p>
   <p>Comments:</p>
   <%= render 'comments/form', parent: nil  %>
-<% else %>
+<%# else %>
   <p class='text-end'>likes <%= @post.likes_count %><p>
-<% end %>
+<%# end %>
 
 <%= render partial: 'comments/comment', collection: @comments.roots unless @comments.nil? %>
 

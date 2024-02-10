@@ -4,10 +4,10 @@ one:
   title: MyStringOne
   body: MyText
   category: one
-  creator_id: <%= User.first.id %>
+  creator: one
 
 two:
   title: MyString
   body: MyText
   category: two
-  creator_id: <%= User.second.id %>
+  creator: one

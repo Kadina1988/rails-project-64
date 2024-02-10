@@ -1,7 +1,7 @@
 ul.border
   li
     p
-      = comment.creator.email
+      = comment.user.email
     = comment.content
     p
     - if user_signed_in?
