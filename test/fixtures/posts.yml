@@ -4,10 +4,10 @@ one:
   title: MyStringOne
   body: MyText
   category: one
-  creator: one
+  creator: users(:one)
 
 two:
   title: MyString
   body: MyText
-  category: two
-  creator: one
+  category: one
+  creator: users(:one)

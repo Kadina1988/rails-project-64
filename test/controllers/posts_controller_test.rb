@@ -16,6 +16,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'get index' do
+    debugger
     get posts_path
     assert_response :success
   end
