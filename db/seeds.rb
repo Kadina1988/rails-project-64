@@ -13,7 +13,5 @@ Post.create(
   title: Faker::Sports::Football.team,
   body: Faker::TvShows::Friends.quote,
   category_id: Category.first.id,
-  creator_id: User.first.id,
+  creator_id: User.first.id
 )
-
-
