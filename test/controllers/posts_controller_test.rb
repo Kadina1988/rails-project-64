@@ -11,9 +11,9 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
       body: 'Text',
       category_id: Category.last.id
     }
+
     @post = users(:one).posts.build(@attrs)
     @post.save if @post.valid?
-    debugger
   end
 
   test 'get index' do
@@ -21,25 +21,25 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  # test 'get should create post' do
-  #   sign_in users(:one)
-  #   assert_difference('Post.count') do
-  #     post '/posts', params: { post: @attrs }
-  #   end
-  #   assert_redirected_to post_path(Post.last)
-  # end
+  test 'get should create post' do
+    sign_in users(:one)
+    assert_difference('Post.count') do
+      post '/posts', params: { post: @attrs }
+    end
+    assert_redirected_to post_path(Post.last)
+  end
 
-  # test 'should show' do
-  #   get post_path(@post)
-  #   assert_response :success
-  # end
+  test 'should show' do
+    get post_path(@post)
+    assert_response :success
+  end
 
-  # test 'should new' do
-  #   if sign_in users(:one)
-  #     get new_post_path
-  #     assert_response :success
-  #   else
-  #     assert_response 302
-  #   end
-  # end
+  test 'should new' do
+    if sign_in users(:one)
+      get new_post_path
+      assert_response :success
+    else
+      assert_response 302
+    end
+  end
 end

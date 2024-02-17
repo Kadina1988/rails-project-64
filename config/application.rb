@@ -18,6 +18,7 @@ module RailsProject64
     # config.active_support.default_message_encryptor_serializer
     # config.active_support.fallback_to_marshal_deserialization
     # config.active_support.use_marshal_serialization
+    config.active_record.verify_foreign_keys_for_fixtures = false
 
     # Configuration for the application, engines, and railties goes here.
     #

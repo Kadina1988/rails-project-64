@@ -1,13 +1,13 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  body: MyString
-  category: one
-  creator: <users(:one).id%>
+# one:
+#   title: MyString_1
+#   body: MyString_1
+#   category: one
+#   creator:
 
-two:
-  title: MyString
-  body: MyString
-  category: two
-  creator: <users(:one).id%>
+# two:
+#   title: MyString_2
+#   body: MyString_2
+#   category: two
+#   creator:
