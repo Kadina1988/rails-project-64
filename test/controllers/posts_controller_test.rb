@@ -13,10 +13,10 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     }
     @post = users(:one).posts.build(@attrs)
     @post.save if @post.valid?
+    debugger
   end
 
   test 'get index' do
-    debugger
     get posts_path
     assert_response :success
   end

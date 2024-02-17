@@ -1,13 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyStringOne
-  body: MyText
+  title: MyString
+  body: MyString
   category: one
-  creator: users(:one)
+  creator: <users(:one).id%>
 
 two:
   title: MyString
-  body: MyText
-  category: one
-  creator: users(:one)
+  body: MyString
+  category: two
+  creator: <users(:one).id%>
