@@ -7,6 +7,7 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
 
   setup do
     @post = posts(:one)
+
     @attr = {
       content: 'Comment',
       ancestry: nil

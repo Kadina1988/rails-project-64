@@ -12,8 +12,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
       category_id: Category.last.id
     }
 
-    @post = users(:one).posts.build(@attrs)
-    @post.save if @post.valid?
+    @post = posts(:one)
   end
 
   test 'get index' do

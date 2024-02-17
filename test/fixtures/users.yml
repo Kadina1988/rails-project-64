@@ -9,3 +9,6 @@ one:
 
 two:
   email: 'teo@two.com'
+
+creator:
+  email: 'creator@mail.com'
