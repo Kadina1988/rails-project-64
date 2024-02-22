@@ -2,12 +2,12 @@
 <p><%= @post.body %></p>
 <p><%= @post.creator.email %></p>
 <% if user_signed_in? %>
-  <p class='text-end'>
+  <div class='text-end'>
     <%= managing_likes(@post) %>
     <%= @post.likes_count %>
-  </p>
+  </div>
   <p>Comments:</p>
-  <%= render 'comments/form', parent: nil  %>
+  <%= render 'comments/form', parent: nil %>
 <% else %>
   <p class='text-end'>likes <%= @post.likes_count %><p>
 <% end %>
@@ -30,4 +30,3 @@
     })
   }
 </script>
-

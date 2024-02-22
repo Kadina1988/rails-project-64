@@ -4,7 +4,7 @@ h2
   = render "devise/shared/error_messages", resource: resource
   .field
     = f.label :email
-  = f.email_field :email, autofocus: true, autocomplete: "email"
+  = f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control'
   br
   .field
     = f.label :password
@@ -13,11 +13,11 @@ h2
         | (
         = @minimum_password_length
         |  characters minimum)
-  = f.password_field :password, autocomplete: "new-password"
+  = f.password_field :password, autocomplete: "new-password", class: 'form-control'
   br
   .field
     = f.label :password_confirmation
-  = f.password_field :password_confirmation, autocomplete: "new-password"
+  = f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control'
   br
   .actions
     = f.submit "Sign up"
