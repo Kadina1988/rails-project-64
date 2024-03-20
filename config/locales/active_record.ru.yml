@@ -1,0 +1,20 @@
+ru:
+  activerecord:
+    models:
+      post: Пост
+    attributes:
+      post:
+        category_id: Категория
+        title: Заголовок
+        body: Текст
+
+    errors:
+      models:
+        post:
+          attributes:
+            title:
+              too_short: слишком короткий
+
+            body:
+              too_short:  слишком маленький
+

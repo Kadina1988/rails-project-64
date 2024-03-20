@@ -1,0 +1,12 @@
+en:
+  new_post: New Post
+  layouts:
+    shared:
+      nav:
+        sign_in: Sign In
+        sign_up: Sign Up
+        sign_out: Sogn Out
+  comments:
+    comment:
+      reply: reply
+

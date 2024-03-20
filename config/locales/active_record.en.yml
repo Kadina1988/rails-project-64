@@ -1,0 +1,9 @@
+en:
+  activerecord:
+    models:
+      post: Post
+    attributes:
+      post:
+        category_id: Category
+        title: Title
+        body: Body

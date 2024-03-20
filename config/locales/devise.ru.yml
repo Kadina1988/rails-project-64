@@ -1,0 +1,9 @@
+ru:
+  devise:
+    failure:
+      already_authenticated: Вы уже зарегистрированы
+    registrations:
+      signed_up: Вы были успешно зарегистрированы
+    sessions:
+      signed_out: Успешно вышли
+      signed_in: Успешно вошли

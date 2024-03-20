@@ -5,7 +5,7 @@ ul.border
     = comment.content
     p
     - if user_signed_in?
-      =< content_tag :a, 'Reply', class: 'collapsible'
+      =< content_tag :a, t('.reply'), class: 'collapsible'
       .collapse id="response-#{comment.id}"
         = render partial: 'comments/form', locals: { parent: comment.id }
     - if comment.has_children?

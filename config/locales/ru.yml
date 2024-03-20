@@ -1,0 +1,12 @@
+ru:
+  blog: Блог
+
+  comment: Комментарии
+
+  posts:
+    index:
+      collective_blog: Коллективный Блог
+    show:
+      likes: понравилось
+    form:
+      create_post: Создать Пост

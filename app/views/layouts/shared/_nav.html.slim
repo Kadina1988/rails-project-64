@@ -1,6 +1,6 @@
 nav.navbar.border-bottom
   a.navbar-brand.container-fluid
-    = link_to 'Blog', root_path, class: 'btn bnt-secondary'
+    = link_to t('blog'), root_path, class: 'btn bnt-secondary'
   p
     = current_user.email if signed_in?
   ul.navbar-nav
