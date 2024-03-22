@@ -14,7 +14,9 @@ ru:
           attributes:
             title:
               too_short: слишком короткий
+              blank: не может быть пустым
 
             body:
               too_short:  слишком маленький
+              blank: не может быть пустым
 

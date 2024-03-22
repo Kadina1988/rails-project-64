@@ -5,6 +5,7 @@ en:
   posts:
     index:
       collective_blog: Collective Blog
+      likes: ' likes: '
     show:
       likes: likes
     form:

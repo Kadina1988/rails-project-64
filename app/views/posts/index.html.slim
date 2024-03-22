@@ -7,6 +7,7 @@ h2 =t('.collective_blog')
       = post.body
     p.fs-6
       = post.creator.email
-      | , likes:
+      |
+      = t('.likes')
       |
       = post.likes_count

@@ -4,6 +4,14 @@ ru:
       already_authenticated: Вы уже зарегистрированы
     registrations:
       signed_up: Вы были успешно зарегистрированы
+      new:
+        email: Почта
+        password: Пароль
+        password_confirmation: Подтверждение Пароля
     sessions:
       signed_out: Успешно вышли
       signed_in: Успешно вошли
+      new:
+        email: Почта
+        password: Пароль
+        remember: Запомнить меня

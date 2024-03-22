@@ -6,6 +6,7 @@ ru:
   posts:
     index:
       collective_blog: Коллективный Блог
+      likes: ' понравилось: '
     show:
       likes: понравилось
     form:
