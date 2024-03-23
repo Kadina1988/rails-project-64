@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require_relative 'validators/like_validator'
 
 class Post < ApplicationRecord
   belongs_to :category

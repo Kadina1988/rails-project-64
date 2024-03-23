@@ -6,7 +6,7 @@ class LikesControllerTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
 
   setup do
-    @current_user = users(:one)
+    @current_user = users(:two)
     @attrs = {
       user_id: @current_user.id
     }
@@ -14,7 +14,7 @@ class LikesControllerTest < ActionDispatch::IntegrationTest
 
   test 'create like' do
     sign_in users(:one)
-    @post = posts(:one)
+    @post = posts(:two)
     assert_difference('PostLike.count') do
       post "/posts/#{@post.id}/likes", params: { post: @attrs }
     end
