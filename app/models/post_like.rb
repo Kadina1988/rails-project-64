@@ -5,6 +5,6 @@ class PostLike < ApplicationRecord
   belongs_to :user
 
   validate do |like|
-    Validator::LikeValidator.new(like).validate
+    LikeValidator.new(like).validate
   end
 end
