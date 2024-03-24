@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require_relative 'like_validator'
 
 class PostLike < ApplicationRecord
   belongs_to :post, counter_cache: :likes_count
