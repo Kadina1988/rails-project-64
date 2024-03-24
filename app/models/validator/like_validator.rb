@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class LikeValidator
+class Validator::LikeValidator
   def initialize(like)
     @like = like
   end
