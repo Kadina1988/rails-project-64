@@ -148,7 +148,7 @@ GEM
       power_assert (>= 1.1)
     msgpack (1.7.2)
     mutex_m (0.2.0)
-    net-imap (0.4.9.1)
+    net-imap (0.3.7)
       date
       net-protocol
     net-pop (0.1.2)
@@ -242,7 +242,7 @@ GEM
     ruby-progressbar (1.13.0)
     ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
-    selenium-webdriver (4.15.0)
+    selenium-webdriver (4.9.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
@@ -331,7 +331,7 @@ DEPENDENCIES
   web-console
 
 RUBY VERSION
-   ruby 3.2.2p53
+   ruby 2.7.2p137
 
 BUNDLED WITH
    2.4.10
