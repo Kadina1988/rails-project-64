@@ -19,6 +19,6 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
     assert_difference('PostComment.count') do
       post "/posts/#{@post.id}/comments", params: { post_comment: @attr }
     end
-    assert_redirected_to post_path(@post)
+    assert_redirected_to post_path(@post, locale: :en)
   end
 end

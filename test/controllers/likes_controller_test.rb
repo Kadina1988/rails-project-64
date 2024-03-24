@@ -18,7 +18,7 @@ class LikesControllerTest < ActionDispatch::IntegrationTest
     assert_difference('PostLike.count') do
       post "/posts/#{@post.id}/likes", params: { post: @attrs }
     end
-    assert_redirected_to post_path(@post)
+    assert_redirected_to post_path(@post, locale: :en)
   end
 
   test 'destroy like' do
@@ -28,6 +28,6 @@ class LikesControllerTest < ActionDispatch::IntegrationTest
       delete post_like_path(like.post, like)
     end
 
-    assert_redirected_to post_path(like.post)
+    assert_redirected_to post_path(like.post, locale: :en)
   end
 end
