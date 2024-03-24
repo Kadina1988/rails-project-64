@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-class LikeValidator < ActiveModel::Validator
+class Validators::LikeValidator < ActiveModel::Validator
+
   def validate(like)
     return unless like_exists?(like)
 
