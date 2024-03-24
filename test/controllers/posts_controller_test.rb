@@ -25,7 +25,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     assert_difference('Post.count') do
       post '/posts', params: { post: @attrs }
     end
-    assert_redirected_to post_path(Post.last, params: { locale: 'en'} )
+    assert_redirected_to post_path(Post.last, params: { locale: 'en' })
   end
 
   test 'should show' do

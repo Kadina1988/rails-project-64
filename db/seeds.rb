@@ -16,5 +16,3 @@ PostComment.create(content: Faker::Movies::HarryPotter.house, user_id: User.last
 comment = PostComment.first
 comment1 = comment.children.create(content: Faker::Music::Opera.donizetti, user_id: User.first.id, post_id: Post.first.id)
 comment1.children.create(content: Faker::Music::Opera.mozart, user_id: User.last.id, post_id: Post.first.id)
-
-
