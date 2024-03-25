@@ -11,3 +11,11 @@ ru:
       likes: понравилось
     form:
       create_post: Создать Пост
+
+  helpers:
+    submit:
+      post:
+        create: Создать Пост
+
+      post_comment:
+        create: Ответить

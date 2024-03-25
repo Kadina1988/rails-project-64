@@ -10,3 +10,11 @@ en:
       likes: likes
     form:
       create_post: Create Post
+
+  helpers:
+    submit:
+      post:
+        create: Create Post
+
+      post_comment:
+        create: Reply
