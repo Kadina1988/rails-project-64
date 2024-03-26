@@ -3,17 +3,18 @@
 <p>
   <%= @post.creator.email %>
   <%= time_from_create(@post) %>
-  <% if user_signed_in? %>
-    <div class='text-end'>
-      <%= managing_likes(@post) %>
-      <%= @post.likes_count %>
-    </div>
-    <p><%= t('comment') %>:</p>
-    <%= render 'comments/form', parent: nil %>
-  <% else %>
-    <p class='text-end'><%= t('.likes') %>: <%= @post.likes_count %><p>
-  <% end %>
 </p>
+
+<% if user_signed_in? %>
+  <div class='text-end'>
+    <%= managing_likes(@post) %>
+    <%= @post.likes_count %>
+  </div>
+  <p><%= t('comment') %>:</p>
+  <%= render 'comments/form', parent: nil %>
+<% else %>
+  <p class='text-end'><%= t('.likes') %>: <%= @post.likes_count %></p>
+<% end %>
 
 <%= render partial: 'comments/comment', collection: @comments.roots unless @comments.nil? %>
 
