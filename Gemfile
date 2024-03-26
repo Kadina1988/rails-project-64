@@ -62,6 +62,7 @@ gem 'sentry-ruby'
 gem 'simple_form'
 gem 'slim'
 gem 'slim_lint', '~> 0.23.0'
+gem 'rails-i18n'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
