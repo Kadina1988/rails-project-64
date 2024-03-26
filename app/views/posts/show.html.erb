@@ -2,7 +2,7 @@
 <p><%= @post.body %></p>
 <p>
   <%= @post.creator.email %>
-  <%= time_from_create(@post) %>
+  <%= since_create(@post) %>
 </p>
 
 <% if user_signed_in? %>

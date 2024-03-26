@@ -2,7 +2,7 @@ ul.border
   li
     p
       = comment.user.email
-      =< create_time(comment)
+      =< created_time(comment)
     = comment.content
     p
     - if user_signed_in?

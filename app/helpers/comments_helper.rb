@@ -1,7 +1,12 @@
 # frozen_string_literal: true
 
 module CommentsHelper
-  def create_time(obj)
-    obj.created_at.strftime('%d %B %H:%M')
+  def created_time(obj)
+    t = obj.created_at
+    if t.year == Time.now.year
+      l(t, format: '%d %B, %H:%M')
+    else
+      l(t, format: '%d %B %Y')
+    end
   end
 end
