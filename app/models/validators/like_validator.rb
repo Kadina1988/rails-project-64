@@ -11,7 +11,9 @@ module Validators
     private
 
     def like_exists?(like)
-      PostLike.where(post_id: like.post_id).where(user_id: like.user_id).present?
+      PostLike.where(post_id: like.post_id).
+               where(user_id: like.user_id).
+               present?
     end
   end
 end
